@@ -1,0 +1,120 @@
+
+# Seleciona Seguro Saúde
+    Select From List by Label           class:select.mb         Seguro Saúde
+    Sleep                                  2
+#validar tela
+    Title Should Be                     Solicitar Seguro Saúde
+    #Element Should Contain              class:icon-seguro-saude icone
+
+    Sleep                               2
+    Capture Page Screenshot 
+
+    #Criar solicitação
+    Sleep                               3
+    Click Element                       class:but.but-pri   
+    #Valida mensagem na tela    
+    Page Should Contain                 Erro
+    Page Should Contain                 Nenhuma alteração foi feita.
+    Capture Page Screenshot 
+    #cancela solicitação
+    Click Element                       class:but.but-sec   
+#=======================================================================================================
+# Seleciona Odonto 
+    Sleep                               2
+    Select From List by Label           class:select.mb         Odonto 
+    Sleep                               2 
+    Title Should Be                     Solicitar Seguro Odontológico 
+    Sleep                               2 
+    Capture Page Screenshot
+    Click Element                       xpath://*[@id="main-interna"]/main/div[2]/div/div[1]/div[2]/div[1]/div[1]/div[2]/label/span    
+    Sleep                               2
+    Click Element                       class:but.but-pri                              
+    Sleep                               3
+
+    Execute Javascript                  window.scrollTo (0, 1500)
+    Sleep                               3
+
+    Click Element                       xpath://*[@id="main-interna"]/main/div[3]/div[2]/button[2]
+    Sleep                               4             
+    Capture Page Screenshot  
+
+
+    #  Clicar no App de Solicitações
+    Click Element                       xpath://*[@id="quick-access"]/app-acesso-rapido/div/div/app-botao-aplicativo[5]/div/div/a
+    Sleep                               5
+#==============================================================================
+    # Seleciona Previdência Privada 
+  
+    Select From List by Label           class:select.mb         Previdência Privada 
+    Sleep                               2 
+    Title Should Be                     Solicitar Previdência Privada 
+    Sleep                               4
+    Click Element                       xpath://*[@id="main-interna"]/main/div[2]/div/div/div[1]/select/option[2]
+    Sleep                               2   
+    Click Element                       xpath://*[@id="main-interna"]/main/div[2]/div/div[1]/div[2]/div[2]/div[1]/label
+    click Element                       xpath://*[@id="main-interna"]/main/div[2]/div/div[1]/div[2]/div[4]/div[1]
+    Input Text                          id=valor23                                  5
+    Execute Javascript                  window.scrollTo (0, 1300)
+    Sleep                               3
+    Click Element                       xpath://*[@id="main-interna"]/main/div[2]/div/div[1]/div[2]/div[7]/div[1]/label
+    Sleep                               3
+    Click Element                       xpath://*[@id="main-interna"]/main/div[2]/div/div[2]/button[2]
+    Sleep                               4
+    Click Element                       xpath://*[@id="main-interna"]/main/div[3]/div/div[4]/div[1]/label[1]/span[1]
+    Sleep                               2
+    Click Element                       xpath://*[@id="main-interna"]/main/div[3]/div/div[4]/div[2]/label[1]/span[1]
+    Sleep                               2
+    Click Element                       xpath://*[@id="main-interna"]/main/div[3]/div/div[4]/div[3]/label[1]/span[1]
+    Execute Javascript                  window.scrollTo (0, 1300)
+    Sleep                               4    
+    Click Element                       xpath://*[@id="main-interna"]/main/div[3]/div/div[4]/div[4]/label[2]/span[1]                                             
+    #Screnshot                                          
+    Sleep                               2
+    Click Element                       xpath://*[@id="main-interna"]/main/div[3]/div/div[6]/button[2]       
+    Sleep                               4  
+    Click Element                       xpath://*[@id="main-interna"]/main/div[4]/div[2]/button[2]
+    Capture Page Screenshot
+    Execute Javascript                  window.scrollTo (0, 0)
+
+    #Clicar no App de Solicitações
+    Sleep                               10
+    Click Element                       xpath://*[@id="quick-access"]/app-acesso-rapido/div/div/app-botao-aplicativo[5]/div/div/a                                 
+    Sleep                               5
+#==============================================================================
+  #Seleciona Seguro de Vida 
+    Select From List by Label           class:select.mb                             Seguro de Vida  
+    Sleep                               2 
+    Title Should Be                     Solicitar Seguro de Vida 
+    Sleep                               3
+    Click Element                       class:but.but-pri.w-100.ml-0.mb
+    Input Text                          name:nome                           Jack Sparrow
+    Select From List by Label           name:listGrauParentesco             Filho(a)
+    Input Text                          name:datadenascimento               1966-08-27
+    Input Text                          name:porcentagemBeneficiario        100
+    Select From List by Label           name=sexo                           Masculino
+    Click Element                       xpath://*[@id="exampleModal"]/div/div/div[3]/button[2]
+    Sleep                               2
+    Click Element                       xpath://*[@id="main-interna"]/main/div[2]/div[2]/button[2]    
+    Execute Javascript                  window.scrollTo (0, 1300)
+    Sleep                               2
+    Click Element                       xpath://*[@id="main-interna"]/main/div[3]/div[2]/button[2]
+                                                
+    Sleep                               3
+    Capture Page Screenshot
+
+ #Volta para o menu de solicitações 
+    Sleep                               2 
+    Click Element                       xpath://*[@id="main-interna"]//*[@title="Solicitar"] 
+    Sleep                               2 
+#=======================================================================================================  
+   #Seleciona Pack Filho 
+    Select From List by Label           class:select.mb                 Pack Filhos VGBL - Previdência 
+    Sleep                               2 
+    Title Should Be                    Solicitar Previdência Privada VGBL Filhos 
+    Sleep                               2 
+    Capture Page Screenshot                                           
+
+   # Volta para o menu de solicitações 
+    Sleep                               2 
+    Click Element                       xpath://*[@id="quick-access"]/app-acesso-rapido/div/div/app-botao-aplicativo[5]/div/div/a
+    Sleep                               5

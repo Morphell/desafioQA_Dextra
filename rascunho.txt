@@ -1,0 +1,54 @@
+
+
+    
+
+    # Seleciona Resgate 
+    Select From List by Label           class:select.mb                 Resgate Previdência 
+    Sleep                               2 
+    Title Should Be                     Solicitar Resgate Previdência Privada 
+    Sleep                               2 
+    Capture Page Screenshot
+
+    Volta para o menu de solicitações 
+    Sleep                               2 
+    Click Element                       xpath://*[@id="main-interna"]//*[@title="Solicitar"] 
+    Sleep
+
+    # Seleciona Ticket Dúvida 
+    Select From List by Label           class:select.mb                 Ticket de Dúvidas 
+    Sleep                               2 
+    Title Should Be                     Solicitar Suporte 
+    Sleep                               2 
+    Capture Page Screenshot
+
+    #Volta para o menu de solicitações 
+    Sleep                               2 
+    Click Element                       xpath://*[@id="main-interna"]//*[@title="Solicitar"] 
+    Sleep                               
+    5 
+    # Seleciona Segunda Via 
+    Select From List by Label           class:select.mb                 Segunda Via de Cartão 
+    Sleep                               2 
+    Title Should Be                     Solicitar Segunda Via 
+    Sleep                               2 
+    Capture Page Screenshot
+
+    #Volta para o menu de solicitações 
+    Sleep                               2 
+    Click Element                       xpath://*[@id="quick-access"]//*[@title="Solicitar"] 
+    Sleep                               5
+
+    # Seleciona Vacina 
+    Select From List by Label           class:select.mb                 Campanha de Vacinação 
+    Sleep                               2 
+    Title Should Be                     Solicitar Vacina 
+    Sleep                               2 
+    Capture Page Screenshot
+
+# Validar solicitações feitas
+#Volta para o menu de solicitações 
+    Sleep                               2 
+    Click Element                       xpath://*[@id="quick-access"]//*[@title="Solicitar"] 
+    Sleep                               5
+
+    Click Element                       class:router-link-active        Solicitações
